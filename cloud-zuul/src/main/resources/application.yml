@@ -13,7 +13,9 @@ eureka:
 zuul:
   prefix: /api #添加路由前缀
   routes:
-    item-service: /item/*
+    item:
+      path: /item/**
+      serviceId: item-service
 
 hystrix:
   command:
@@ -29,4 +31,21 @@ ribbon:
   MaxAutoRetries: 0  # 当前服务重试次数
   MaxAutoRetriesNextServer: 1 # 切换服务重试次数
   OkToRetryOnAllOperations: false # 是否对所有的请求方式都重试，只对get请求重试
+
+cloudStore:
+  cors:
+    allowedOrigins:
+      - http://manage.leyou.com
+    allowCredentials: true
+    allowedHeaders:
+      - "*"
+    allowedMethods:
+      - GET
+      - POST
+      - DELETE
+      - PUT
+      - OPTIONS
+      - HEAD
+    maxAge: 3600
+    filterPath: "/**"
 
