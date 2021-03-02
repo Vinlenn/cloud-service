@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import java.util.List;
 
 @Data
-@ConfigurationProperties(prefix = "ly.cors")
+@ConfigurationProperties(prefix = "cloudstore.cors")
 public class CORSProperties {
 	private List<String> allowedOrigins;
 	private Boolean allowCredentials;

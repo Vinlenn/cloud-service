@@ -35,7 +35,7 @@ ribbon:
 cloudStore:
   cors:
     allowedOrigins:
-      - http://manage.leyou.com
+      - http://manage.cloudstore.com
     allowCredentials: true
     allowedHeaders:
       - "*"
